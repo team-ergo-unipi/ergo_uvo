@@ -105,9 +105,9 @@ int main(int argc, char **argv)
         loop_rate.sleep();
     }
 
-    ROS_GREEN_STREAM(" ###################################################################################################################### ");
-    ROS_GREEN_STREAM(" ############################################# STARTING VISUAL ODOMETRY NODE ########################################## ");
-    ROS_GREEN_STREAM(" ######################################################################################################################\n ");
+    ROS_WARN(" ###################################################################################################################### ");
+    ROS_WARN(" ############################################# STARTING VISUAL ODOMETRY NODE ########################################## ");
+    ROS_WARN(" ######################################################################################################################\n ");
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////// LOADING CAMERA PARAMETERS FROM YAML FILE ///////////////////////////////////////
@@ -236,12 +236,12 @@ int main(int argc, char **argv)
             // CHECK THE NUMBER OF FEATURE CORRESPONDECES
             if(matches.size() < MIN_NUM_FEATURES)
             {
-                ROS_YELLOW_STREAM("NUMBER OF FEATURES IS TOO LOW. SKIP ITERATION!");
+                ROS_WARN("NUMBER OF FEATURES IS TOO LOW. SKIP ITERATION!");
                 skipped_imgs = skipped_imgs + 1;
                 if(skipped_imgs < SKIPPED_IMGS){continue;}
                 else
                 {
-                    ROS_RED_STREAM("TOO MANY IMAGES SKIPPED!");
+                    ROS_WARN("TOO MANY IMAGES SKIPPED!");
                     skipped_imgs              = 0;
 
                     // Constant Motion Model
@@ -262,7 +262,7 @@ int main(int argc, char **argv)
             // CHECK CONSECUTIVE IMAGES BASELINE
             if(!check_if_moving(prev_keypoints_conv, curr_keypoints_conv))
             {
-                ROS_YELLOW_STREAM("BASELINE IS TOO LOW. SKIPPING IMAGE!");
+                ROS_WARN("BASELINE IS TOO LOW. SKIPPING IMAGE!");
                 continue;
             } 
 
@@ -299,7 +299,7 @@ int main(int argc, char **argv)
 
             else
             {
-                ROS_YELLOW_STREAM("FAIL DURING RECOVER POSE- ASSUMING CONSTANT MOTION");
+                ROS_WARN("FAIL DURING RECOVER POSE- ASSUMING CONSTANT MOTION");
                 successful_estimate.data    = 0;
 
                 // Constant Motion Model
@@ -323,7 +323,7 @@ int main(int argc, char **argv)
 
                 if(good_prevCam_points.rows < MIN_NUM_3DPOINTS)
                 {
-                    ROS_YELLOW_STREAM("NOT ENOUGH TRIANGULATED POINTS - ASSUMING CONSTANT MOTION");
+                    ROS_WARN("NOT ENOUGH TRIANGULATED POINTS - ASSUMING CONSTANT MOTION");
                     successful_estimate.data  = 0;
                     SF                        = SF_vector[SF_vector.size()-1];
 
@@ -343,7 +343,7 @@ int main(int argc, char **argv)
                     }
                     else
                     {
-                        ROS_YELLOW_STREAM("NOT ENOUGH TRIANGULATED POINTS - ASSUMING CONSTANT MOTION");
+                        ROS_WARN("NOT ENOUGH TRIANGULATED POINTS - ASSUMING CONSTANT MOTION");
                         successful_estimate.data    = 0;
                         SF                          = SF_vector[SF_vector.size()-1];
 
@@ -372,9 +372,9 @@ int main(int argc, char **argv)
             mono_output_computation(estimated_rpy, estimated_position_NED, estimated_linear_velocity_body, estimated_angular_velocity_body,
                          R_world_body, R_body_cam, deltaT, R_currCam_prevCam, t_currCam_prevCam, SF, world_points, world_position, successful_estimate);
 
-            ROS_GREEN_STREAM(" ######################################################################### ");
-            ROS_GREEN_STREAM(" ########################### ITERATION ENDED ############################# ");
-            ROS_GREEN_STREAM(" #########################################################################\n ");
+            ROS_WARN(" ######################################################################### ");
+            ROS_WARN(" ########################### ITERATION ENDED ############################# ");
+            ROS_WARN(" #########################################################################\n ");
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////// UPDATING FOR THE NEXT ITERATION ////////////////////////////////////////////

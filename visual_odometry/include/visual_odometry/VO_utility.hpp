@@ -1,7 +1,7 @@
 // ######################################################################################################################################################## //
 // ######################################################################################################################################################## //
 //                                                                                                                                                          //
-//                                  This file contains all the functions exploited within the visual odometry node                                          //                          //                                              //
+//                                  This file contains all the functions exploited within the visual odometry node                                          //       
 //                                                                                                                                                          //
 // -------------------------------------------------------------------------------------------------------------------------------------------------------- //
 //                            Author:  Francesco Ruscio       Email: francesco.ruscio@phd.unipi.it     Date:  06/06/2022                                    //
@@ -15,7 +15,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "ros/ros.h"
-#include "ROS_print_in_color.h" 
 #include <visual_odometry/math_utility.hpp>        
 #include <opencv2/xfeatures2d/nonfree.hpp>
 #include "sensor_msgs/CompressedImage.h"

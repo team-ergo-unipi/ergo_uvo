@@ -222,7 +222,7 @@ int main(int argc, char **argv)
             ////////////////////////////////////// PROCESSING THE CURRENT COUPLE OF IMAGES ////////////////////////////////////////
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-            ROS_CYAN_STREAM(" < ------------------- PROCESSING STEREO PAIR ------------------- > ");
+            ROS_WARN(" < ------------------- PROCESSING STEREO PAIR ------------------- > ");
 
             curr_time = img_header.stamp;
             deltaT = curr_time - prev_time;
@@ -265,7 +265,7 @@ int main(int argc, char **argv)
             //////////////////////////////////// PROCESSING PREVIOUS AND CURRENT LEFT IMAGES //////////////////////////////////////
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-            ROS_CYAN_STREAM(" < ------------------- TRIANGULAR MATCHING ------------------- > ");
+            ROS_WARN(" < ------------------- TRIANGULAR MATCHING ------------------- > ");
 
             vector< DMatch > results_match_prev_curr;
             
@@ -388,7 +388,7 @@ int main(int argc, char **argv)
 
                 else
                 {
-                    ROS_YELLOW_STREAM("NOT ENOUGH TRIANGULATED POINTS - ASSUMING CONSTANT MOTION");
+                    ROS_WARN("NOT ENOUGH TRIANGULATED POINTS - ASSUMING CONSTANT MOTION");
                     t_prevCam_currCam = previous_t_prevCam_currCam * deltaT.toSec() / previous_deltaT.toSec();
                     angular_vector    = from_vector_to_mat_type(estimated_angular_velocity_body.vector);
                     R_prevCam_currCam = (deltaT.toSec() * from_vector_to_skew_matrix(from_mat_to_vector_type(R_body_cam.t() * angular_vector)) + Mat::eye(3, 3, CV_64F)) * previous_R_prevCam_currCam;
@@ -400,7 +400,7 @@ int main(int argc, char **argv)
             }
             else
             {
-                ROS_YELLOW_STREAM("NUMBER OF FEATURES AFTER TRIANGULAR MATCHING IS TOO LOW - ASSUMING CONSTANT MOTION");
+                ROS_WARN("NUMBER OF FEATURES AFTER TRIANGULAR MATCHING IS TOO LOW - ASSUMING CONSTANT MOTION");
                 t_prevCam_currCam = previous_t_prevCam_currCam * deltaT.toSec() / previous_deltaT.toSec();
                 angular_vector    = from_vector_to_mat_type(estimated_angular_velocity_body.vector);
                 R_prevCam_currCam = (deltaT.toSec() * from_vector_to_skew_matrix(from_mat_to_vector_type(R_body_cam.t() * angular_vector)) + Mat::eye(3, 3, CV_64F)) * previous_R_prevCam_currCam;
@@ -444,9 +444,9 @@ int main(int argc, char **argv)
             previous_R_prevCam_currCam  = R_prevCam_currCam.clone();
             previous_deltaT             = deltaT;
 
-            ROS_GREEN_STREAM(" ###################################################################################################################### ");
-            ROS_GREEN_STREAM(" #################################################### ITERATION ENDED ################################################# ");
-            ROS_GREEN_STREAM(" ######################################################################################################################\n ");
+            ROS_WARN(" ###################################################################################################################### ");
+            ROS_WARN(" #################################################### ITERATION ENDED ################################################# ");
+            ROS_WARN(" ######################################################################################################################\n ");
         }
     }
     return 0;
