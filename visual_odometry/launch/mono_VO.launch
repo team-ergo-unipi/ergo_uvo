@@ -1,0 +1,27 @@
+<!-- ######################################################################################################################################################## -->
+<!-- ######################################################################################################################################################## -->
+<!-- 																																						  -->
+<!-- 										File to launch the mono visual odometry node																	  -->
+<!-- 																																						  -->
+<!-- 							Author:  Francesco Ruscio       Email: francesco.ruscio@phd.unipi.it     Date:  06/06/2022 								      -->
+<!-- 							Author:  Simone Tani            Email: simone.tani@phd.unipi.it          Date:  06/06/2022 								      -->
+<!-- 																																						  -->
+<!-- ######################################################################################################################################################## -->
+<!-- ######################################################################################################################################################## -->
+
+<launch>
+
+	<param name = "use_sim_time" value = "true"/>
+
+	<!-- SETTING CAMERA NAME -->
+	<arg name="camera_name" default="desired_camera_name"/> 
+	<param name="camera_name" type="str" value="$(arg camera_name)"/>
+
+	<!-- LOADING YAML FILES -->
+	<rosparam file = "$(find visual_odometry)/config/mono_VO_intrinsics.yaml"/>
+	<rosparam file = "$(find visual_odometry)/config/mono_VO_parameters.yaml"/>
+
+	<!-- STARTING MONO VO NODE -->
+	<node name="mono_VO" pkg ="visual_odometry" type="mono_VO" output="screen"/>
+
+</launch>
