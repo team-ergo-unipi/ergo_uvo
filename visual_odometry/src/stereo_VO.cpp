@@ -438,7 +438,7 @@ int main(int argc, char **argv)
             prev_right_keypoints_after_stereo_match = curr_right_keypoints_after_stereo_match;
 
             prev_left_descr_after_stereo_match = curr_left_descr_after_stereo_match.clone();
-            prev_right_descr_after_stereo_match = curr_left_descr_after_stereo_match.clone();
+            prev_right_descr_after_stereo_match = curr_right_descr_after_stereo_match.clone();
 
             previous_t_prevCam_currCam  = t_prevCam_currCam.clone();
             previous_R_prevCam_currCam  = R_prevCam_currCam.clone();
