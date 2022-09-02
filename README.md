@@ -94,7 +94,7 @@ If you use UVO in an academic context, please cite the following publications:
 * **Stereo VO**
 
   @unpublished{Tani2022IFAC,  
-    title = {Stereo Vision System for Autonomous Ship Hull Inspection},
+    title = {Stereo Vision System for Autonomous Ship Hull Inspection},  
     author = {Tani, Simone and Ruscio, Francesco and Bresciani, Matteo and Caiti, Andrea and Costanzi, Riccardo},  
     journal={IFAC-PapersOnLine},  
     year = {2022}  
