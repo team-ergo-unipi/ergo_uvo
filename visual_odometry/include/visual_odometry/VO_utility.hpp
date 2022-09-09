@@ -692,7 +692,7 @@ void get_VO_parameters(ros::NodeHandle node_obj)
     node_obj.getParam("/vo_params/max_skipped_imgs", SKIPPED_IMGS);
     node_obj.getParam("/vo_params/feature_tracking", FEATURES_TRACKING);
     node_obj.getParam("/vo_params/essential_max_iters", ESSENTIAL_MAX_ITERS);
-    node_obj.getParam("/vo_params/esenntial_confidence", ESSENTIAL_CONFIDENCE);
+    node_obj.getParam("/vo_params/essential_confidence", ESSENTIAL_CONFIDENCE);
     node_obj.getParam("/vo_params/essential_threshold", ESSENTIAL_THRESHOLD);
     node_obj.getParam("/vo_params/homography_max_iters", HOMOGRAPHY_MAX_ITERS);
     node_obj.getParam("/vo_params/homography_confidence", HOMOGRAPHY_CONFIDENCE);
