@@ -11,23 +11,37 @@
 
 ***
 
-# UVO
-This repository contains the ROS implementation of two visual odometry (VO) strategies tailored for the underwater domain developed by the Underwater Robotics reasearch group at the University of Pisa.
+# UVO - Underwater Visual Odometry
+This repository contains the ROS implementation of two Visual Odometry (VO) strategies tailored for the underwater domain developed by the underwater robotics reasearch group of Department of Information Engineering at University of Pisa, which is part of the Interuniversity Center of Integrated Systems for the Marine Environment (ISME). 
 
-## Monocular VO
-This strategy exploits a single camera together with altitude information to solve the scale ambiguity issue. The strategy is feature-based and switches between essential and homography matrix for relative motion estimation. The estimated motion is used to triangulate matched features, which are then compared to scene distance information (available from an additional sensor) to retrieve the scale factor.
+## Monocular UVO
+This strategy exploits a single camera together with range information to solve the scale ambiguity issue. The strategy is feature-based and switches between essential and homography matrix for relative motion estimation. The estimated motion is used to triangulate matched features, which are then compared to scene distance information (available from an additional sensor) to retrieve the scale factor. 
 
-## Stereo VO
+
+## Stereo UVO
 This solution exploits a stereo VO approach, following a 3D-to-2D method that allows to recover the motion between two consecutive camera views from the visual feedback of a stereo camera.
 
 ***
 
 ### Input/Output
-In both cases, the input is a sequence of distorted and compressed images. The monocular strategy takes as additional input the observations of a distance sensor, necessary to recover the scale factor at each iteration. 
+In both cases, the input is a sequence of distorted and compressed images. The monocular strategy takes as additional input the range observations from a distance sensor, necessary to recover the scale factor at each iteration. 
 Instead, the provided output is composed of:
 * global position of the vision system, expressed in coordinates with respect to the NED reference system;
 * sparse 3D reconstruction of the scene framed by the vision system, in the form of point cloud in coordinates with respect to the NED reference system; 
-* the relative motion between previous and current camera views, in terms of angular velocity, linear velocity and euler angles.
+* the relative motion between previous and current camera views, in terms of angular velocity, linear velocity and euler angles;
+* validity flag to assess the successfulness of the estimate.
+
+The ROS diagram of the two UVO nodes including their input and output topics is shown below.
+
+#### <ins>Monocular VO ROS diagram</ins>
+<p align="center">
+  <img width="560" src="/imgs/monoVO.png">
+</p>
+
+#### <ins>Stereo VO ROS diagram</ins>
+<p align="center">
+  <img width="560" src="/imgs/stereoVO.png">
+</p>
 
 ### Content
 The content of the visual_odometry folder is the following:
@@ -53,7 +67,7 @@ To install the Full-Desktop version of ROS Melodic: http://wiki.ros.org/melodic/
 ### OpenCV
 OpenCV libraries (http://opencv.org/) are used to elaborate images and estimate camera motion.  
 
-**Note:** OpenCV **NonFree module** is required to use *SURF* detector and descriptor. 
+**Note:** OpenCV **extra modules** are required to use *SURF* detector and descriptor. 
 
 Dowload and installation instructions of OpenCV with extra modules can be found at: https://github.com/opencv/opencv_contrib
 
@@ -86,7 +100,7 @@ If you use UVO in an academic context, please cite the following publications:
   @unpublished{Ruscio2022IFAC,  
     title = {Visual-based Navigation Strategy for Autonomous Underwater Vehicles in Monitoring Scenarios},  
     author = {Ruscio, Francesco and Tani, Simone and Bresciani, Matteo and Caiti, Andrea and Costanzi, Riccardo},    
-    journal={IFAC-PapersOnLine},    
+    booktitle={IFAC-CAMS 2022, Kongens Lyngby, Denmark},    
     year = {2022}    
   }
 
@@ -96,7 +110,7 @@ If you use UVO in an academic context, please cite the following publications:
   @unpublished{Tani2022IFAC,  
     title = {Stereo Vision System for Autonomous Ship Hull Inspection},  
     author = {Tani, Simone and Ruscio, Francesco and Bresciani, Matteo and Caiti, Andrea and Costanzi, Riccardo},  
-    journal={IFAC-PapersOnLine},  
+    booktitle={IFAC-CAMS 2022, Kongens Lyngby, Denmark},  
     year = {2022}  
   }
 
