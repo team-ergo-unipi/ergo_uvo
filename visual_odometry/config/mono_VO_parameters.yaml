@@ -23,7 +23,7 @@ vo_params:
 
   # RANSAC PARAMS ESSENTIAL MATRIX
   essential_max_iters: 2000             
-  esenntial_confidence: 0.99
+  essential_confidence: 0.99
   essential_threshold: 0.1
 
   # RANSAC PARAMS HOMOGRAPHY MATRIX
