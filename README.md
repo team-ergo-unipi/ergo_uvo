@@ -97,20 +97,38 @@ If you use UVO in an academic context, please cite the following publications:
 
 * **Monocular VO**
 
-  @unpublished{Ruscio2022IFAC,  
-    title = {Visual-based Navigation Strategy for Autonomous Underwater Vehicles in Monitoring Scenarios},  
-    author = {Ruscio, Francesco and Tani, Simone and Bresciani, Matteo and Caiti, Andrea and Costanzi, Riccardo},    
-    booktitle={IFAC-CAMS 2022, Kongens Lyngby, Denmark},    
-    year = {2022}    
+  @article{RUSCIO2022369,
+	title = {Visual-based Navigation Strategy for Autonomous Underwater Vehicles in Monitoring Scenarios},
+	journal = {IFAC-PapersOnLine},
+	volume = {55},
+	number = {31},
+	pages = {369-374},
+	year = {2022},
+	note = {14th IFAC Conference on Control Applications in Marine Systems, Robotics, and Vehicles CAMS 2022},
+	issn = {2405-8963},
+	doi = {https://doi.org/10.1016/j.ifacol.2022.10.456},
+	url = {https://www.sciencedirect.com/science/article/pii/S2405896322025022},
+	author = {F. Ruscio and S. Tani and M. Bresciani and A. Caiti and R. Costanzi},
+	keywords = {Autonomous underwater vehicles, Visual odometry, Estimation, filtering, Robot Navigation, Programming, Vision, Perception, sensing},
+	abstract = {}
   }
 
 
 * **Stereo VO**
 
-  @unpublished{Tani2022IFAC,  
-    title = {Stereo Vision System for Autonomous Ship Hull Inspection},  
-    author = {Tani, Simone and Ruscio, Francesco and Bresciani, Matteo and Caiti, Andrea and Costanzi, Riccardo},  
-    booktitle={IFAC-CAMS 2022, Kongens Lyngby, Denmark},  
-    year = {2022}  
+  @article{TANI2022375,
+	title = {Stereo Vision System for Autonomous Ship Hull Inspection},
+	journal = {IFAC-PapersOnLine},
+	volume = {55},
+	number = {31},
+	pages = {375-380},
+	year = {2022},
+	note = {14th IFAC Conference on Control Applications in Marine Systems, Robotics, and Vehicles CAMS 2022},
+	issn = {2405-8963},
+	doi = {https://doi.org/10.1016/j.ifacol.2022.10.457},
+	url = {https://www.sciencedirect.com/science/article/pii/S2405896322025034},
+	author = {S. Tani and F. Ruscio and M. Bresciani and A. Caiti and R. Costanzi},
+	keywords = {Autonomous underwater vehicles, Perception, sensing, Marine system navigation, guidance, control, Kalman filtering techniques in marine systems 		control, Motion control},
+	abstract = {}
   }
 
