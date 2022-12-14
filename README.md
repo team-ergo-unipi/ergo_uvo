@@ -111,19 +111,14 @@ If you use UVO in an academic context, please cite the following publications:
 
 * **Stereo VO**
 
-  @article{TANI2022375,
-title = {Stereo Vision System for Autonomous Ship Hull Inspection},
-journal = {IFAC-PapersOnLine},
-volume = {55},
-number = {31},
-pages = {375-380},
-year = {2022},
-note = {14th IFAC Conference on Control Applications in Marine Systems, Robotics, and Vehicles CAMS 2022},
-issn = {2405-8963},
-doi = {https://doi.org/10.1016/j.ifacol.2022.10.457},
-url = {https://www.sciencedirect.com/science/article/pii/S2405896322025034},
-author = {S. Tani and F. Ruscio and M. Bresciani and A. Caiti and R. Costanzi},
-keywords = {Autonomous underwater vehicles, Perception, sensing, Marine system navigation, guidance, control, Kalman filtering techniques in marine systems control, Motion control},
-abstract = {}
+@article{tani2022stereo,<br />
+  title={Stereo Vision System for Autonomous Ship Hull Inspection},<br />
+  author={Tani, S and Ruscio, F and Bresciani, M and Caiti, A and Costanzi, R},<br />
+  journal={IFAC-PapersOnLine},<br />
+  volume={55},<br />
+  number={31},<br />
+  pages={375--380},<br />
+  year={2022},<br />
+  publisher={Elsevier}<br />
 }
 
