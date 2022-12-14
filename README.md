@@ -98,27 +98,27 @@ If you use UVO in an academic context, please cite the following publications:
 * **Monocular VO**
 
 @article{ruscio2022visual,<br />
-  title={Visual-based Navigation Strategy for Autonomous Underwater Vehicles in Monitoring Scenarios},<br />
-  author={Ruscio, F and Tani, S and Bresciani, M and Caiti, A and Costanzi, R},<br />
-  journal={IFAC-PapersOnLine},<br />
-  volume={55},<br />
-  number={31},<br />
-  pages={369--374},<br />
-  year={2022},<br />
-  publisher={Elsevier}<br />
+&nbsp;&nbsp;  title={Visual-based Navigation Strategy for Autonomous Underwater Vehicles in Monitoring Scenarios},<br />
+&nbsp;&nbsp;  author={Ruscio, F and Tani, S and Bresciani, M and Caiti, A and Costanzi, R},<br />
+&nbsp;&nbsp;  journal={IFAC-PapersOnLine},<br />
+&nbsp;&nbsp;  volume={55},<br />
+&nbsp;&nbsp;  number={31},<br />
+&nbsp;&nbsp;  pages={369--374},<br />
+&nbsp;&nbsp;  year={2022},<br />
+&nbsp;&nbsp;  publisher={Elsevier}<br />
 }
 
 
 * **Stereo VO**
 
 @article{tani2022stereo,<br />
-  title={Stereo Vision System for Autonomous Ship Hull Inspection},<br />
-  author={Tani, S and Ruscio, F and Bresciani, M and Caiti, A and Costanzi, R},<br />
-  journal={IFAC-PapersOnLine},<br />
-  volume={55},<br />
-  number={31},<br />
-  pages={375--380},<br />
-  year={2022},<br />
-  publisher={Elsevier}<br />
+&nbsp;&nbsp;  title={Stereo Vision System for Autonomous Ship Hull Inspection},<br />
+&nbsp;&nbsp;  author={Tani, S and Ruscio, F and Bresciani, M and Caiti, A and Costanzi, R},<br />
+&nbsp;&nbsp;  journal={IFAC-PapersOnLine},<br />
+&nbsp;&nbsp;  volume={55},<br />
+&nbsp;&nbsp;  number={31},<br />
+&nbsp;&nbsp;  pages={375--380},<br />
+&nbsp;&nbsp;  year={2022},<br />
+&nbsp;&nbsp;  publisher={Elsevier}<br />
 }
 
