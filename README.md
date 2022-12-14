@@ -97,20 +97,11 @@ If you use UVO in an academic context, please cite the following publications:
 
 * **Monocular VO**
 
-  @article{RUSCIO2022369,
-	title = {Visual-based Navigation Strategy for Autonomous Underwater Vehicles in Monitoring Scenarios},
-	journal = {IFAC-PapersOnLine},
-	volume = {55},
-	number = {31},
-	pages = {369-374},
-	year = {2022},
-	note = {14th IFAC Conference on Control Applications in Marine Systems, Robotics, and Vehicles CAMS 2022},
-	issn = {2405-8963},
-	doi = {https://doi.org/10.1016/j.ifacol.2022.10.456},
-	url = {https://www.sciencedirect.com/science/article/pii/S2405896322025022},
-	author = {F. Ruscio and S. Tani and M. Bresciani and A. Caiti and R. Costanzi},
-	keywords = {Autonomous underwater vehicles, Visual odometry, Estimation, filtering, Robot Navigation, Programming, Vision, Perception, sensing},
-	abstract = {}
+  @unpublished{Ruscio2022IFAC,  
+    title = {Visual-based Navigation Strategy for Autonomous Underwater Vehicles in Monitoring Scenarios},  
+    author = {Ruscio, Francesco and Tani, Simone and Bresciani, Matteo and Caiti, Andrea and Costanzi, Riccardo},    
+    journal={IFAC-PapersOnLine},    
+    year = {2022}    
   }
 
 
