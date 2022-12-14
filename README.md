@@ -97,12 +97,16 @@ If you use UVO in an academic context, please cite the following publications:
 
 * **Monocular VO**
 
-  @unpublished{Ruscio2022IFAC,  
-    title = {Visual-based Navigation Strategy for Autonomous Underwater Vehicles in Monitoring Scenarios},  
-    author = {Ruscio, Francesco and Tani, Simone and Bresciani, Matteo and Caiti, Andrea and Costanzi, Riccardo},    
-    journal={IFAC-PapersOnLine},    
-    year = {2022}    
-  }
+@article{ruscio2022visual,
+  title={Visual-based Navigation Strategy for Autonomous Underwater Vehicles in Monitoring Scenarios},
+  author={Ruscio, F and Tani, S and Bresciani, M and Caiti, A and Costanzi, R},
+  journal={IFAC-PapersOnLine},
+  volume={55},
+  number={31},
+  pages={369--374},
+  year={2022},
+  publisher={Elsevier}
+}
 
 
 * **Stereo VO**
