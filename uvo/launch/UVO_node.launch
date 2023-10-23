@@ -1,0 +1,41 @@
+<launch>
+
+	<param name = "use_sim_time" value = "true"/>
+
+	<!-- SETTING CAMERA NAME -->
+	<arg name="camera_name" default="downward_camera"/>   									  									
+	<param name="camera_name" type="str" value="$(arg camera_name)"/>
+
+	<!-- SETTING UVO NODE -->
+	<arg name="visual_odometry_node" default="mono"/>   									  									
+	<param name="visual_odometry_node" type="str" value="$(arg visual_odometry_node)"/>
+
+
+	<!-- - - - - - - MONO UVO - - - - - - - -->
+	<group if="$(eval arg('visual_odometry_node') == 'mono')">
+		<!-- PLAYING ROSBAG FILE -->
+		<node pkg = "rosbag" type = "play" name = "player" output = "screen" args = "--clock $(find uvo)/bags/test.bag" />
+
+		<!-- LOADING YAML FILES -->
+		<rosparam file = "$(find uvo)/config/mono_VO_intrinsics.yaml"/>
+		<rosparam file = "$(find uvo)/config/mono_VO_parameters.yaml"/>
+
+		<!-- RUNNING MONO UVO NODE -->
+		<node name="mono_UVO" pkg ="uvo" type="UVO_node" output="screen" respawn = "true"/>
+  	</group>
+
+
+  	<!-- - - - - - - STEREO UVO - - - - - - - -->
+  	<group if="$(eval arg('visual_odometry_node') == 'stereo')">
+		<!-- PLAYING ROSBAG FILE -->
+		<node pkg = "rosbag" type = "play" name = "player" output = "screen" args = "--clock $(find uvo)/bags/test.bag" />
+
+		<!-- LOADING YAML FILES -->
+		<rosparam file = "$(find uvo)/config/stereo_VO_intrinsics.yaml"/>
+		<rosparam file = "$(find uvo)/config/stereo_VO_parameters.yaml"/>
+
+		<!-- RUNNING STEREO UVO NODE -->
+		<node name="stereo_UVO" pkg ="uvo" type="UVO_node" output="screen" respawn = "true"/>
+  	</group>
+
+</launch>

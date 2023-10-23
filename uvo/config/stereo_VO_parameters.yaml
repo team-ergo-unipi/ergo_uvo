@@ -1,0 +1,55 @@
+# ---------------------------------------------------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------------------------------------------------------------------------------- #
+# -------------------------------------------- PARAMETERS EMPLOYED WITHIN THE STEREO VISUAL ODOMETRY NODE -------------------------------------------- #
+# ---------------------------------------------------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------------------------------------------------------------------------------- #
+
+# NODE PARAMETERS
+node_freq: 20                           # NODE FREQUENCY                        
+
+
+# PREPROCESSING PARAMETERS
+preprocessing:
+  desired_width: 640                    # WIDTH OF RESIZED IMAGES
+  clahe: true                           # FLAG FOR CLAHE APPLICATION
+  clip_limit: 8                         # CONTRAST LEVEL
+
+
+# VO PARAMETERS
+vo_params:
+  feature_detector: 'SURF'
+  min_num_features: 5.0                # MINIMUM NUMBER OF FEATURES REQUIRED IN AN IMAGE 
+  min_num_3Dpoints: 5.0                # MINIMUM NUMBER OF TRIANGULATED POINTS
+  min_num_inliers: 5.0                 # MINIMUM NUMBER OF INLIERS AFTER RANSAC 
+  reprojection_threshold: 3.0          # THRESHOLD FOR REPROJECTION ERROR USED TO EVALUATE TRIANGULATED POINTS  
+  lowe_ratio_test: 0.8
+  
+  # PnP RANSAC PARAMETERS
+  iterations_count: 1000  
+  reprojection_error: 1.0  
+  confidence: 0.99 
+  use_extrinsic_guess: false
+  pnp_method_flag: 1                    # SOLVEPNP_ITERATIVE = 0, SOLVEPNP_EPNP = 1, SOLVEPNP_P3P = 2, SOLVEPNP_DLS = 3, SOLVEPNP_UPNP = 4, 
+
+
+# VISUALIZATION PARAMETERS
+visualization:
+  fps: 100 
+  show_match: false                     # FLAG USED TO SHOW MATCHED FEATURES
+
+
+# SURF PARAMETERS
+surf_params:
+  min_hessian: 1500
+  n_octaves: 4
+  n_octave_layers: 3
+  extended: false
+  upright: true
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------------------------------------------------------------------------------- #
+
+

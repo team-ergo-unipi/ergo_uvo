@@ -1,0 +1,49 @@
+# NODE PARAMETERS
+node_freq: 20                           # NODE FREQUENCY                    
+
+# PREPROCESSING PARAMETERS
+preprocessing:
+  desired_width: 640                    # WIDTH OF RESIZED IMAGES             
+  clahe:         true                   # FLAG FOR CLAHE APPLICATION
+  clip_limit:    3                      # CONTRAST LEVEL
+
+
+# VO PARAMETERS
+vo_params:
+  distance:                  10.0      # FEATURE DISPLACEMENT      
+
+  feature_detector:          'SURF'    # AKAZE, ORB, SIFT, SURF
+  lowe_ratio_test:           0.7       # VALUE FOR THE RATIO TEST
+
+  essential_outlier_method:  4         # LMEDS=4, RANSAC=8, RHO=16, USAC_DEFAULT=32, USAC_PARALLEL=33, USAC_FM_8PTS=34, USAC_FAST=35, USAC_ACCURATE=36, USAC_PROSAC=37, USAC_MAGSAC=38 
+  essential_max_iters:       2000      
+  essential_confidence:      0.99
+  essential_threshold:       0.1       
+
+  homography_outlier_method: 4         # LEAST SQUARE=0, LMEDS=4, RANSAC=8, RHO=16
+  homography_max_iters:      2000
+  homography_confidence:     0.99
+  homography_threshold:      0.1       
+
+  homography_distance:       50.0
+  valid_point_fraction:      0.4
+  reprojection_threshold:    0.1      # THRESHOLD FOR REPROJECTION ERROR USED TO EVALUATE TRIANGULATED POINTS
+
+  min_num_features:          20.0     # MINIMUM NUMBER OF FEATURES REQUIRED IN IMAGE PAIRS 
+  min_num_inliers:           10.0     # MINIMUM NUMBER OF INLIERS
+  min_num_3Dpoints:          5.0      # MINIMUM NUMBER OF TRIANGULATED POINTS
+
+
+# VISUALIZATION PARAMETERS
+visualization:
+  fps:         100
+  show_match:  false                  # FLAG USED TO SHOW MATCHED FEATURES
+
+
+# SURF PARAMETERS
+surf_params:
+  min_hessian:     50
+  n_octaves:       4        
+  n_octave_layers: 3         
+  extended:        false
+  upright:         true
