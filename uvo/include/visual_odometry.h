@@ -284,7 +284,7 @@ void visual_odometry_node::mono_VO(ros::Rate loop_rate)
             }
             else{
                 
-                match_features(prev_keypoints, curr_keypoints, prev_descriptors, curr_descriptors, matches, prev_keypoints_conv, curr_keypoints_conv, prev_img, curr_img);
+                match_features(prev_keypoints, curr_keypoints, prev_descriptors, curr_descriptors, matches, prev_keypoints_conv, curr_keypoints_conv);
             }
 
 

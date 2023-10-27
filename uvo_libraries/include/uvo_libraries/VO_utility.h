@@ -107,7 +107,7 @@ void get_mono_camera_parameters(ros::NodeHandle node_obj, string CAMERA_NAME);
 void get_stereo_camera_parameters(ros::NodeHandle node_obj, string CAMERA_NAME);
 void get_VO_parameters(ros::NodeHandle node_obj);
 void match_features(vector<KeyPoint> keypoints1, vector<KeyPoint> keypoints2, Mat descriptors1, Mat descriptors2, vector<DMatch> &matches);
-void match_features(vector<KeyPoint> keypoints1, vector<KeyPoint> keypoints2, Mat descriptors1, Mat descriptors2, vector<DMatch> &matches, vector<Point2f> &keypoints1_conv, vector<Point2f> &keypoints2_conv, Mat img1, Mat img2);
+void match_features(vector<KeyPoint> keypoints1, vector<KeyPoint> keypoints2, Mat descriptors1, Mat descriptors2, vector<DMatch> &matches, vector<Point2f> &keypoints1_conv, vector<Point2f> &keypoints2_conv);
 int recover_pose_homography(Mat H, vector<Point2f> inliers1, vector<Point2f> inliers2, Mat cameraMatrix, Mat& R, Mat& t);
 void resize_camera_matrix(Mat original_image, Mat& cameraMatrix, Mat distortionCoeff, Mat& newCamMatrix);
 vector<double> reproject_errors(const Mat& world_points, const Mat& R, const Mat& t, const Mat& cameraMatrix, const vector<Point2f>& img_points);

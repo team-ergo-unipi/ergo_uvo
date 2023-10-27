@@ -548,7 +548,7 @@ void match_features(vector<KeyPoint> keypoints1, vector<KeyPoint> keypoints2, Ma
 // ############################################################ //
 
 
-void match_features(vector<KeyPoint> keypoints1, vector<KeyPoint> keypoints2, Mat descriptors1, Mat descriptors2, vector<DMatch> &matches, vector<Point2f> &keypoints1_conv, vector<Point2f> &keypoints2_conv, Mat img1, Mat img2)
+void match_features(vector<KeyPoint> keypoints1, vector<KeyPoint> keypoints2, Mat descriptors1, Mat descriptors2, vector<DMatch> &matches, vector<Point2f> &keypoints1_conv, vector<Point2f> &keypoints2_conv)
 {
     vector< vector< DMatch > > knn_matches;
     float ratio_thresh = LOWE_RATIO_THRESHOLD;
