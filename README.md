@@ -76,7 +76,7 @@ Dowload and installation instructions of OpenCV with extra modules can be found 
 ## Execution
 
 Run the *.launch file* contained in the *launch folder* to test the mono UVO node using the *.bag file* provided by the authors.
-To download the *.bag file*, please follow this link: https://131.114.50.130/index.php/s/SzxxqqzSWpFzHiA
+To download the *.bag file*, please follow this link: https://131.114.50.130/index.php/s/SzxxqqzSWpFzHiA . 
 Once the *.bag file* is downloaded, please put it inside the dedicated *bag folder*.
 
 
