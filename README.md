@@ -100,15 +100,12 @@ If you use UVO in an academic context, please cite the following publications:
 
 * **Monocular UVO**
 
-@article{ruscio2022visual,<br />
-&nbsp;&nbsp;  title={Visual-based Navigation Strategy for Autonomous Underwater Vehicles in Monitoring Scenarios},<br />
-&nbsp;&nbsp;  author={Ruscio, F and Tani, S and Bresciani, M and Caiti, A and Costanzi, R},<br />
-&nbsp;&nbsp;  journal={IFAC-PapersOnLine},<br />
-&nbsp;&nbsp;  volume={55},<br />
-&nbsp;&nbsp;  number={31},<br />
-&nbsp;&nbsp;  pages={369--374},<br />
-&nbsp;&nbsp;  year={2022},<br />
-&nbsp;&nbsp;  publisher={Elsevier}<br />
+@article{ruscio2025monocular,<br />
+&nbsp;&nbsp;  title={Monocular Visual-Based State Estimator for Online Navigation in Complex and Unstructured Underwater Environments},<br />
+&nbsp;&nbsp;  author={Ruscio, Francesco and Tani, Simone and Caiti, Andrea and Costanzi, Riccardo},<br />
+&nbsp;&nbsp;  journal={Journal of Field Robotics},<br />
+&nbsp;&nbsp;  year={2025},<br />
+&nbsp;&nbsp;  publisher={Wiley Online Library}<br />
 }
 
 
